@@ -28,11 +28,18 @@ Este projeto unifica ferramentas modernas de Desenvolvimento Web e Inteligência
 * OpenCV (`cv2`) para processamento das imagens e captura de frames.
 
 **Frontend:**
+Desenvolvimento completo da camada visual da aplicação, criando interfaces responsivas, intuitivas e integradas ao backend Flask.
+
 * HTML5, CSS3 e JavaScript Vanilla.
 * Fetch API para comunicação assíncrona (sem recarregar a página) com o backend.
 * Jinja2 (Motor de templates do Flask).
 
-
+Principais entregas:
+- Criação e organização das telas do sistema.
+- Desenvolvimento de formulários e validações no navegador.
+- Integração entre frontend e backend.
+- Ajustes de responsividade para diferentes dispositivos.
+- Melhoria da experiência do usuário (UX/UI).
 
 ## ✒️ Autores
 * Alini da Silva - Desenvolvimento Full Stack ---
