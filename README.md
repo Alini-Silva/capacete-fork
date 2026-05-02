@@ -28,6 +28,7 @@ Este projeto unifica ferramentas modernas de Desenvolvimento Web e Inteligência
 * OpenCV (`cv2`) para processamento das imagens e captura de frames.
 
 **Frontend:**
+
 Desenvolvimento completo da camada visual da aplicação, criando interfaces responsivas, intuitivas e integradas ao backend Flask.
 
 * HTML5, CSS3 e JavaScript Vanilla.
