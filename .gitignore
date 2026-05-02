@@ -14,9 +14,6 @@ epi_scanner.log
 captures/
 
 
-__init__.py
-
-
 criar_banco.py
 
 
@@ -28,3 +25,8 @@ CamCore/static/js/camera2.js
 #Banco de dados
 instance
 
+#API original da CAMERA
+capacete/app.py
+
+
+.env
