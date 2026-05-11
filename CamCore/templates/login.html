@@ -33,13 +33,23 @@
 
     </header>
 
-<!-- Formulário -->
+    <!-- Formulário -->
     <main>
+
         <body>
             <form class="login-card" action="/login" method="POST">
                 {{ form.hidden_tag() }}
                 <h2>Login</h2>
-
+                {% with mensagens = get_flashed_messages(with_categories=true) %}
+                    {% if mensagens %}
+                        {% for categoria, mensagem in mensagens %}
+                            <div class="alert alert-{{ categoria }}">
+                                 {{ mensagem }}
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+                
                 <div class="form-group">
                     <div class="icon">
                         <svg viewBox="0 0 24 24">
@@ -61,7 +71,7 @@
 
                 </div>
                 <a href="{{ url_for('reset_senha') }}" class="forgot-password">Esqueci minha senha</a>
-                
+
 
 
                 {{ form.botao_confimacao(class="btn-submit") }}
