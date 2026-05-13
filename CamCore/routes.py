@@ -178,11 +178,8 @@ def processar_frame():
     if frame is None:
         return jsonify({"erro": "Frame inválido"}), 400
 
-    # ==============================================================
-    # 🚨 DETOX DE MEMÓRIA: Encolhe a foto antes da IA e do Banco!
-    # Isso salva a RAM do servidor e o espaço no HD do Render.
+    # Encolhe a foto antes da IA e do Banco!
     frame = cv2.resize(frame, (640, 480))
-    # ==============================================================
 
     # 2. Roda a IA
     results = model(frame, verbose=False)
@@ -203,7 +200,7 @@ def processar_frame():
         tempo_decorrido = agora - estado["tempo_sem_capacete_inicio"]
 
         # Se passou de 10 segundos sem capacete e não está em cooldown
-        if tempo_decorrido >= 10 and (agora - estado["ultimo_alerta"]) >= 10:
+        if tempo_decorrido >= 5 and (agora - estado["ultimo_alerta"]) >= 5:
             # Salva a imagem (agora ela será salva mais leve graças ao resize!)
             nome_arquivo = f"alerta_{usuario_id}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.jpg"
             caminho_salvamento = CAPTURE_DIR / nome_arquivo
