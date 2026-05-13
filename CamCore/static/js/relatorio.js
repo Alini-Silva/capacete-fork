@@ -108,3 +108,12 @@ async function deletarAlerta(alertaId) {
     alert("Erro de conexão. Verifique o console.");
   }
 }
+
+// Captura o botão de hambúrguer e a div do menu
+const menuToggle = document.getElementById('menuToggle');
+const menuDesktop = document.getElementById('menuDesktop');
+
+// Quando clicar no hambúrguer, liga/desliga a classe 'ativo' no menu
+menuToggle.addEventListener('click', function() {
+    menuDesktop.classList.toggle('ativo');
+});
