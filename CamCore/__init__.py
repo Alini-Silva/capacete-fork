@@ -47,3 +47,6 @@ login_manager.login_view = "login"
 mail = Mail(app)
 
 from CamCore import routes, models
+
+with app.app_context():
+    database.create_all()

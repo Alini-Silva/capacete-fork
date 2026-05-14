@@ -54,6 +54,10 @@ O que ele guarda no banco:
   - foto capturada do momento
   - de qual câmera veio
 
+coisas novas-teste
+
+
+
 Sobre o usuario_id = 1:
   Por enquanto todos os alertas são salvos com usuario_id = 1.
   Isso é temporário! Quando o login estiver pronto,
